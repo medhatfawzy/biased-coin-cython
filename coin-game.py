@@ -1,16 +1,17 @@
 import time
-from coin_flip import coin_flip
+from coin_flip import game_a, game_b, mixed_game
 
 start = time.time()
 
-head_count = 0
-tails_count = 0
-for i in range(100000000):
-    if coin_flip() == "head":
-        head_count += 1
-    else:
-        tails_count += 1
+balance = 1000
+rounds =  1000000
+
+end_balance_a = game_a(balance, rounds)
+end_balance_b = game_b(balance, rounds)
+end_balance_mixed = mixed_game(balance, rounds)
 
 end  = time.time()
-print(f"Got {head_count} heads and {tails_count} tails")
+print(f"Won {end_balance_a} in Game A")
+print(f"Won {end_balance_b} in Game B")
+print(f"Won {end_balance_mixed} in MixedGame")
 print(f"Done in {end - start}s")

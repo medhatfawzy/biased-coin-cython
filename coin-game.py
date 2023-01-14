@@ -13,4 +13,4 @@ for i in range(100000000):
 
 end  = time.time()
 print(f"Got {head_count} heads and {tails_count} tails")
-print(f"Done in {end - start} s")
+print(f"Done in {end - start}s")
